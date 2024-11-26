@@ -41,9 +41,11 @@ document.getElementById('toggleButton').addEventListener('click', function () {
     const infoDiv = document.getElementById('info');
     if (infoDiv.classList.contains('hidden')) {
         infoDiv.classList.remove('hidden');
+        infoDiv.classList.add('view');
         this.textContent = 'Сховати джерела інформації';
     } else {
         infoDiv.classList.add('hidden');
+        infoDiv.classList.remove('view');
         this.textContent = 'Показати джерела інформації';
     }
 });
