@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    user-select: none;
     line-height: 1.6;
     color: #333;
-    background-color: #4e9cea;
+    background-color: #02735E;
     margin: 0;
     padding: 0;
 }
@@ -18,9 +18,9 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #007bff; /* Синій фон */
+    width: 80px; /* Збільшено ширину */
+    height: 80px; /* Збільшено висоту */
+    background-color: #04BF7B; /* Синій фон */
     color: white;
     border: none;
     border-radius: 50%;
@@ -30,18 +30,19 @@ body {
     display: none; /* Схована за замовчуванням */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100; /* Кнопка буде поверх усіх інших елементів */
 }
 
 #back-to-top:hover {
-    background-color: #0056b3; /* Темніший синій при наведенні */
-    transform: scale(1.1); /* Збільшення кнопки */
+    background-color: #038C65; /* Темніший синій при наведенні */
+    transform: scale(2.1); /* Збільшення кнопки */
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    color: #011947;
+    color: #345956;
     
 }
 
@@ -49,7 +50,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    color: #011947;
+    color: #345956;
     display: flex;
         align-items: center;
         justify-content: space-between;
@@ -92,14 +93,14 @@ header p {
 header .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #2d5eba;
+    background: #038C65;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 header .btn:hover {
-    background:#011947;
+    background:#02735E;
     ;
 }
 
@@ -131,7 +132,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний шар */
+    background: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний шар */
     z-index: 1;
 }
 
@@ -185,9 +186,12 @@ header::before {
 
 /* Навігація */
 nav {
-    background: #040451;
+    background: #345956;
     color: white;
     padding: 10px 0;
+    position: sticky;  /* Закріпити елемент при прокручуванні */
+    top: 0;  /* Вказує, що елемент буде закріплений від верхньої частини */
+    z-index: 1000;  /* Забезпечує, що панель буде поверх інших елементів */
 }
 
 nav ul {
@@ -243,15 +247,38 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація */
 } 
+.article2{
+    background-color: #f9f9f9; /* Світло-сірий фон */
+    padding: 20px;
+    border: 1px solid #ddd; /* Легка рамка */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація */
+    margin: 5px 20px;
+} 
+.article3{
+    background-color: #f9f9f9; /* Світло-сірий фон */
+    padding: 20px;
+    border: 1px solid #ddd; /* Легка рамка */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація */
+    margin: 5px 20px;
+} 
+.article3:hover {
+    transform: scale(1.15); /* Збільшення розміру */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Посилення тіні */
+}
+.articles-grid2 {
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
 
 .article:hover {
     transform: scale(1.3); /* Збільшення розміру */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Посилення тіні */
 }
-
-/*.articles-grid:hover {
-    transition: scale(1.2) ease-in-out 0.3s
-}*/
 
 .articles-grid article {
     background: #f9f9f9;
@@ -262,7 +289,11 @@ nav ul li a:hover {
 
 .articles-grid article h3 {
     margin-bottom: 10px;
-    color: #3278f2;
+    color: #02735E;
+}
+.section h2 {
+    margin-bottom: 10px;
+    color: #02735E;
 }
 
 /* Форма */
@@ -284,7 +315,7 @@ form input, form textarea {
 
 form button {
     padding: 10px;
-    background: #4caf50;
+    background: #038C65;
     color: white;
     border: none;
     border-radius: 5px;
@@ -292,14 +323,14 @@ form button {
 }
 
 form button:hover {
-    background: #45a049;
+    background: #345956;
 }
 
 /* Футер */
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #040451;
+    background: #345956;
     color: white;
 }
 
@@ -307,16 +338,35 @@ footer {
     display: none;
 }
 
-.view
-{
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px; 
+.view {
+    display: flex;
+    justify-content: space-between; /* Робить пункти рівновіддаленими */
+    align-items: center;
+    gap: 10px; /* Відстань між блоками */
+    height: auto;
     height: 60px;
-    padding: 14px 32%;
+    padding: 14px 5%; /* Зменшено бічні відступи */
     margin-top: 10px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     border-radius: 5px;
+}
+.view div {
+    flex: 1; /* Блоки розтягуються рівномірно */
+    text-align: center; /* Вирівнювання тексту всередині */
+}
+
+.view a {
+    color: #038C65; /* Зміна кольору посилання */
+    text-decoration: none; /* Відсутність підкреслення */
+    font-weight: bold;
+    white-space: nowrap; /* Забороняє перенос тексту */
+    transition: color 0.3s, text-decoration 0.3s; /* Плавність змін при наведенні */
+}
+
+.view a:hover {
+    color: #065648; /* Зміна кольору при наведенні */
+    text-decoration: underline; /* Додається підкреслення */
 }
 
 .bottomMenu
@@ -329,21 +379,36 @@ footer {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #2d5eba; /* Початковий колір кнопки */
+    background-color: #039761; /* Початковий колір кнопки */
     border: none;
     border-radius: 15px; /* Закруглені кути */
-    box-shadow: 0 9px #5d85fc; /* Тінь кнопки */
+    box-shadow: 0 9px #345956; /* Тінь кнопки */
     margin: 20px auto; /* Автоматичне вирівнювання по горизонталі */
     display: block;
 }
 
 .bottomMenu:hover {
-    background-color: #1f54b6; /* Колір при наведенні */
+    background-color: #038C65; /* Колір при наведенні */
   }
   
   .bottomMenu:active {
-    background-color: #003cac; /* Колір при натисканні */
-    box-shadow: 0 5px #5d85fc; /* Зменшена тінь */
+    background-color: #02735E; /* Колір при натисканні */
+    box-shadow: 0 5px #345956; /* Зменшена тінь */
     transform: translateY(4px); /* Легка зміна положення */
   }
 
+
+.title_dop
+{
+    text-align: center;
+}
+h4{
+    color: #02735E
+}
+
+.title_li 
+{
+    margin: 5px 20px;
+    font-size: 22px;
+    color: #038C65;
+}

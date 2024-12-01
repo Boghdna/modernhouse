@@ -1,8 +1,8 @@
 // Масив зображень для слайдера
 const images = [
-    'https://homesmart.com.ua/content/uploads/images/1%281%29.png',
-    'https://marketing.brain.com.ua/static/articles_icon/82.png',
-    'https://vencon.ua/uploads/blog/all/vozmozhnosti-umnogo-doma-obzor-sistem-1.jpg'
+    'https://gmk.center/wp-content/uploads/2020/09/main-7.jpg',
+    'https://ecopolitic.com.ua/wp-content/uploads/2021/03/shutterstock_1216216276-750x500.jpg',
+    'https://koleo.com.ua/wp-content/uploads/2022/12/%D1%84%D0%BE%D1%82%D0%BE_%D0%A1%D1%83%D1%87%D0%B0%D1%81%D0%BD%D1%96-%D0%B5%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%87%D0%BD%D1%96-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%97_%D0%9A%D0%BE%D0%BB%D0%B5%D0%BE.jpg'
 ];
 
 let currentImageIndex = 0; // Поточний індекс зображення
